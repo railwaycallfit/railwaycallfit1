@@ -230,9 +230,7 @@ def registrar_glucosa():
         Usuario_id = request.json["Usuario_id"]
 
         sql = """
-            INSERT INTO registro_glucosa
-            (glucosa, fecha, Usuario_id, nota, comentarios)
-            VALUES (%s, %s, %s, %s, %s)
+           INSERT INTO Registro_glucosa(glucosa, fecha, Usuario_id, nota, comentarios) values(%s, %s, %s,%s,%s);
         """
 
         cursor.execute(
