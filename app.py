@@ -151,7 +151,7 @@ def insertar_recetas():
 #USUARIO
 
 
-@app.route("/", methods=["POST"])
+@app.route("/registro_glucosa", methods=["POST"])
 @cross_origin()
 def insertar_usuarios():
     glucosa = request.json["glucosa"]
