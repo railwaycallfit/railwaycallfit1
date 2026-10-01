@@ -164,7 +164,7 @@ def insertar_usuarios():
     cursor = mysql.connection.cursor()
 
     sql = "INSERT INTO Registro_glucosa(glucosa, fecha, Usuario_id, nota, comentarios, ) values(%s, %s, %s, %s, %s);"
-    cursor.execute(sql, (glucosa, fecha, Usuario_id, nota, comentarios, ))
+    cursor.execute(sql, (glucosa, fecha, Usuarioid, nota, comentarios, ))
 
 
     mysql.connection.commit()
