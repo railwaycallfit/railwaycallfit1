@@ -1,9 +1,10 @@
 @URL = https://web-production-8ee60.up.railway.app
 
-# http://127.0.0.1:5000
+# Para probar en local: http://127.0.0.1:5000
 
-# https://web-production-b7a31.up.railway.app
 
+#######################################
+# USUARIO (tabla Usuario)
 
 ###
 # Obtener todos los usuarios
@@ -15,14 +16,14 @@ POST {{URL}}/nuevo_usuario
 Content-Type: application/json
 
 {
-    "nombre": "Juan",
-    "apellido": "Perez",
-    "provincia": "Buenos Aires"
+    "nombre": "Christian",
+    "email": "christian.ramos@example.com",
+    "contrasenia": "123456",
+    "edad": 18
 }
 
-
 ###
-# Actualizar usuario con id=1
+# Actualizar el nombre del usuario con id=1
 PUT {{URL}}/actualizar_usuario/1
 Content-Type: application/json
 
@@ -34,11 +35,12 @@ Content-Type: application/json
 # Eliminar usuario con id=1
 DELETE {{URL}}/eliminar_usuario/1
 
+
 #######################################
-#PROYECTO
+# PROYECTO
 
 ###
-# Crear usuario
+# Crear dieta
 POST {{URL}}/nuevo_recetas
 Content-Type: application/json
 
@@ -52,24 +54,11 @@ Content-Type: application/json
 }
 
 ###
-# Crear usuario
-POST {{URL}}/nuevo_usuarios
-Content-Type: application/json
-
-{
-    "nombre": "christian",
-    "direccionmail": "christian.ramos@example.com",
-    "contraseña": "123456",
-    "edad": "18",
-    "id": "1"
-}
-
-###
-# Obtener todos los usuarios
+# Obtener dietas
 GET {{URL}}/traer_recetas
 
 ###
-# Crear usuario
+# Guardar registro de glucosa
 POST {{URL}}/registro_glucosa
 Content-Type: application/json
 
@@ -80,3 +69,7 @@ Content-Type: application/json
     "comentarios": "me gusta las pasas",
     "Usuario_id": 1
 }
+
+###
+# Obtener registros de glucosa
+GET {{URL}}/registro_glucosa
